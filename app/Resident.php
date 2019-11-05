@@ -4,24 +4,23 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Client extends Model
+class Resident extends Model
 {
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = [
+     protected $fillable = [
         'name',
-        'email',
-        'phone'
+        'surname'
     ];
     
     /**
-     * Get the documents for the client.
+     * Get the apartments for the resident.
      */
-    public function documents()
+    public function apartaments()
     {
-        return $this->hasMany('App\Document');
+        return $this->hasMany('App\Apartament');
     }
 }

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>{{ config('app.name', 'SGA') }}</title>
+  <title>{{ config('app.name', 'SGC') }}</title>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
@@ -23,9 +23,9 @@
     <!-- Logo -->
     <a href="index2.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini">SGA</span>
+      <span class="logo-mini">SGC</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>SGA</span>
+      <span class="logo-lg"><b>SGC</span>
     </a>
 
     <!-- Header Navbar -->
@@ -76,12 +76,7 @@
     <section class="sidebar">
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li><a href="/home"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-        <li class="header">CADASTROS</li>
-        <!-- Optionally, you can add icons to the links -->
-        <li><a href="/clients"><i class="fa fa-user"></i> <span>Clientes</span></a></li>
-        <li><a href="/documents"><i class="fa fa-file"></i> <span>Documentos</span></a></li>
-        
+        <li><a href="/home"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>        
       </ul>
       <!-- /.sidebar-menu -->
     </section>
@@ -99,7 +94,7 @@
 
   <!-- Main Footer -->
   <footer class="main-footer">
-    <div align="center">&copy;Ânima</div>
+    <div align="center">&copy;Group Software</div>
   </footer>
   
   <!-- Add the sidebar's background. This div must be placed
@@ -118,14 +113,6 @@
 <script src="{{ asset('/js/bootbox.all.min.js') }}"></script>
 <script src="{{ asset('/js/main.js') }}"></script>
 
-<script>
-  $(document).ready(function(){
-      // Máscaras
-      $('.date').mask('00/00/0000');
-      $('.phone').mask('(00)00000-0000');
-      $('.money').mask('###0.00', {reverse: true});
-  });
-</script>
 
 </body>
 </html>

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDocumentsTable extends Migration
+class CreateBlocksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateDocumentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('documents', function (Blueprint $table) {
+        Schema::create('blocks', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('client_id')->unsigned();    
-            $table->string('document', 100);
-            $table->string('status', 20);
+            $table->integer('condominium_id')->unsigned();                 
+            $table->string('name', 3);
             $table->timestamps();
-            $table->foreign('client_id')->references('id')->on('documents');
+            $table->foreign('condominium_id')->references('id')->on('condos');
         });
     }
 
@@ -30,6 +29,6 @@ class CreateDocumentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('documents');
+        Schema::dropIfExists('blocks');
     }
 }
