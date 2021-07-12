@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Apartment;
+use Illuminate\Support\Facades\DB;
+use App\Matriculas;
 
 class HomeController extends Controller
 {
@@ -23,9 +24,14 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        $apartments = Apartment::all()->sortBy('number');
+    {        
+        $alunos = DB::table('alunos')->count();
+        $cursos = DB::table('cursos')->count();
+        $matriculas = Matriculas::where('ativo', 1)->count();
         
-        return view('home')->with('apartments', $apartments);
+        return view('home')
+            ->with('alunos', $alunos)
+            ->with('cursos', $cursos)
+            ->with('matriculas', $matriculas);
     }
 }

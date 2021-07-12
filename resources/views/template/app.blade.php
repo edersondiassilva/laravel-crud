@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>{{ config('app.name', 'SGC') }}</title>
+  <title>{{ config('app.name', 'Uol Edtech') }}</title>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
@@ -23,9 +23,9 @@
     <!-- Logo -->
     <a href="index2.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini">SGC</span>
+      <span class="logo-mini">UOL</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>SGC</span>
+      <span class="logo-lg"><b>UOL EdTech</span>
     </a>
 
     <!-- Header Navbar -->
@@ -76,7 +76,10 @@
     <section class="sidebar">
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li><a href="/home"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>        
+        <li><a href="/home"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>    
+        <li><a href="/alunos"><i class="fa fa-address-card"></i> <span>Alunos</span></a></li>
+        <li><a href="/cursos"><i class="fa fa-cubes"></i> <span>Cursos</span></a></li>      
+        <li><a href="/matriculas"><i class="fa fa-laptop"></i> <span>Matriculas</span></a></li>        
       </ul>
       <!-- /.sidebar-menu -->
     </section>
@@ -94,7 +97,7 @@
 
   <!-- Main Footer -->
   <footer class="main-footer">
-    <div align="center">&copy;Group Software</div>
+    <div align="center">&copy;UOL EdTech</div>
   </footer>
   
   <!-- Add the sidebar's background. This div must be placed

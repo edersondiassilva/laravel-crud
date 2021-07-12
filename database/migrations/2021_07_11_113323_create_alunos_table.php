@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateExpensesTable extends Migration
+class CreateAlunosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateExpensesTable extends Migration
      */
     public function up()
     {
-        Schema::create('expenses', function (Blueprint $table) {
+        Schema::create('alunos', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('block_id')->unsigned();
-            $table->string('name', 100);
-            $table->decimal('value', 8, 2);
+            $table->string('nome');
+            $table->string('email');
+            $table->string('senha');
             $table->timestamps();
-            $table->foreign('block_id')->references('id')->on('blocks');
         });
     }
 
@@ -30,6 +29,6 @@ class CreateExpensesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('expenses');
+        Schema::dropIfExists('alunos');
     }
 }
